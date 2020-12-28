@@ -1,0 +1,7 @@
+CREATE OR REPLACE PROCEDURE refresh_mat_view()
+LANGUAGE plpgsql    
+AS $$
+BEGIN
+  REFRESH MATERIALIZED VIEW CONCURRENTLY mentor_stat;
+END;
+$$
